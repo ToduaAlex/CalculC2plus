@@ -1,0 +1,80 @@
+#include <iostream>
+using namespace std;
+
+class Calculator
+{
+    int num1, num2; 
+public:
+    Calculator() //по умолчанию
+    {
+        num1 = num2 = 1;
+    }
+
+    void set_n1(int val1) // установка значения для числа а
+    {
+        num1 = val1;
+    }
+
+    int get_n1()// возвращение значения числа а
+    {
+        return num1;
+    }
+
+    void set_n2(int val2)   
+    {
+        if (val2 == 0)  
+            return;
+        num2 = val2;
+    }
+
+    int get_n2()
+    {
+        return num2;
+    }
+
+    int sum()
+    {
+        return num1 + num2;
+    }
+
+    int sub()
+    {
+        return num1 - num2;
+    }
+
+    int mul()
+    {
+        return num1 * num2;
+    }
+
+    float del()
+    {
+        return static_cast <float>(num1) / num2;
+    }
+
+};
+
+class Calc: public Calculator
+{
+public:
+    int div_()
+    {
+        return get_n1() / get_n2();
+    }
+    int mod()
+    {
+        return get_n1() % get_n2();
+    }
+};
+
+int main()
+{
+    int num1, num2;
+    cout << "first number: "; cin >> num1;
+    cout << "second number: "; cin >> num2;
+    Calc calkul;
+    calkul.set_n1(num1);
+    calkul.set_n2(num2);
+    cout << "SUM=" << calkul.sum() << "; SUB=" << calkul.sub() << "; MUL=" << calkul.mul() << "; DEL=" << calkul.del() << "; DIV=" << calkul.div_() << "; MOD=" << calkul.mod() << endl;
+    return 0;
+}
