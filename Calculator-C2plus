@@ -3,7 +3,7 @@ using namespace std;
 
 class Calculator
 {
-    int num1, num2; 
+    int num1, num2;
 public:
     Calculator() //по умолчанию
     {
@@ -21,9 +21,9 @@ public:
     }
 
     void set_n2(int val2)  // установка значения для числа №2
- 
+
     {
-        if (val2 == 0)  
+        if (val2 == 0)
             return;
         num2 = val2;
     }
@@ -55,7 +55,7 @@ public:
 
 };
 
-class Calc: public Calculator
+class Calc : public Calculator
 {
 public:
     int div_()
@@ -76,6 +76,11 @@ int main()
     Calc calkul;
     calkul.set_n1(num1);
     calkul.set_n2(num2);
-    cout << "SUM=" << calkul.sum() << "; SUB=" << calkul.sub() << "; MUL=" << calkul.mul() << "; DEL=" << calkul.del() << "; DIV=" << calkul.div_() << "; MOD=" << calkul.mod() << endl;
+    cout << "SUM = " << calkul.sum() << endl;
+    cout << "SUB = " << calkul.sub() << endl;
+    cout << "MUL = " << calkul.mul() << endl;
+    cout << "DEL = " << calkul.del() << endl;
+    cout << "DIV = " << calkul.div_() << endl;
+    cout << "MOD = " << calkul.mod() << endl;
     return 0;
 }
