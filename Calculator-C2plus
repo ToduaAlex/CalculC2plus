@@ -10,44 +10,45 @@ public:
         num1 = num2 = 1;
     }
 
-    void set_n1(int val1) // установка значения для числа а
+    void set_n1(int val1) // установка значения для числа №1
     {
         num1 = val1;
     }
 
-    int get_n1()// возвращение значения числа а
+    int get_n1()// возвращение значения числа №1
     {
         return num1;
     }
 
-    void set_n2(int val2)   
+    void set_n2(int val2)  // установка значения для числа №2
+ 
     {
         if (val2 == 0)  
             return;
         num2 = val2;
     }
 
-    int get_n2()
+    int get_n2() // возвращение значения числа №2 
     {
         return num2;
     }
 
-    int sum()
+    int sum() // сумма
     {
         return num1 + num2;
     }
 
-    int sub()
+    int sub() //разница
     {
         return num1 - num2;
     }
 
-    int mul()
+    int mul() // произведение 
     {
         return num1 * num2;
     }
 
-    float del()
+    float del() // деление
     {
         return static_cast <float>(num1) / num2;
     }
@@ -59,11 +60,11 @@ class Calc: public Calculator
 public:
     int div_()
     {
-        return get_n1() / get_n2();
+        return get_n1() / get_n2(); // целая часть от деления
     }
     int mod()
     {
-        return get_n1() % get_n2();
+        return get_n1() % get_n2(); // остаток от деления
     }
 };
 
