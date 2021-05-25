@@ -47,12 +47,6 @@ public:
     {
         return num1 * num2;
     }
-
-    float del() // деление
-    {
-        return static_cast <float>(num1) / num2;
-    }
-
 };
 
 class Calc : public Calculator
@@ -79,7 +73,6 @@ int main()
     cout << "SUM = " << calkul.sum() << endl;
     cout << "SUB = " << calkul.sub() << endl;
     cout << "MUL = " << calkul.mul() << endl;
-    cout << "DEL = " << calkul.del() << endl;
     cout << "DIV = " << calkul.div_() << endl;
     cout << "MOD = " << calkul.mod() << endl;
     return 0;
